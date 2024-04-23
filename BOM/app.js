@@ -1,9 +1,18 @@
+// location
+location.assign("https://rollingcodeschool.com");
+
+location.replace("https://rollingcodeschool.com");
+
+location.reload(); //recarga la página
+
+location.href = "https://google.com";
+
 const recargar = () => {
   location.reload();
 };
 
 const memoryTest = () => {
-  if (navigator.deviceMemory < 16) {
+  if (navigator.deviceMemory < 4) {
     console.warn("Memoria insuficiente");
   }
 };
@@ -25,6 +34,13 @@ const dondeEstoy = () => {
     console.error("Geolocalización no es soportada en el navegador");
   }
 };
+
+//history
+let cantidadPaginas = 0;
+if (cantidadPaginas < history.length) {
+  history.go(1);
+  cantidadPaginas++;
+}
 
 //Funciones de tiempo
 
